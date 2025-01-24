@@ -1,46 +1,68 @@
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #fff, #f9f3e7);
+  color: #333;
+}
+
 /* Carousel Section */
 .carousel-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  padding-top: 60px;
+  background: linear-gradient(to bottom, #ffeccd, #fff);
   text-align: center;
-  background: linear-gradient(to right, #fff, #f9f3e7);
-  padding: 50px 20px;
+  overflow: hidden;
 }
 
 .carousel-heading {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
   color: #333;
-  margin-bottom: 20px;
 }
 
-.carousel-heading strong {
-  color: #f5a623; /* Yellow text for "Perfect Trainers" */
+.carousel-heading span {
+  color: #f5a623;
 }
 
 .carousel-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 30px;
 }
 
 .carousel-images {
   display: flex;
+  padding: 30px;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 50px;
+  overflow-x: auto; /* Ensures images can scroll horizontally on smaller screens */
+  scroll-behavior: smooth;
 }
 
 .carousel-image {
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .carousel-image.center-image {
-  width: 200px;
-  height: 200px;
-  transform: scale(1.1); /* Make the center image slightly bigger */
+  width: 250px;
+  height: 250px;
+  transform: scale(1.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-arrow {
@@ -58,8 +80,9 @@
   transition: background-color 0.3s;
 }
 
-.carousel-arrow:hover {
-  background-color: #f39c12;
+.carousel-arrow:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .left-arrow {
@@ -71,117 +94,496 @@
 }
 
 /* Our Services Section */
+/* Our Services Section */
 .services-section {
-  text-align: center;
-  background-color: #f9f3e7;
-  padding: 50px 20px;
+  height: 100vh; /* Full screen height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f4ed;
+  padding: 20px;
 }
 
 .section-heading {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #4d4d4d;
 }
 
 .services-container {
   display: flex;
-  justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .service-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  width: 250px;
+  width: 300px;
+  text-align: center;
+  background: #fff;
+  border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transition for hover effect */
 }
 
 .service-card:hover {
-  transform: translateY(-10px);
+  transform: scale(1.05); /* Slightly scale the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a larger shadow */
+}
+
+.service-image {
+  width: 100%; /* Ensure the image takes up full width */
+  height: 200px; /* Fixed height for consistency */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
 .service-card h3 {
-  color: #f5a623;
+  font-size: 1.5rem;
+  color: #ff9000;
   margin-bottom: 10px;
 }
 
 .service-card p {
-  color: #666;
+  font-size: 1rem;
+  color: #4d4d4d;
 }
 
-/* Testimonials Section */
+/* Styling the "Know More" button */
+.know-more-btn {
+  background-color: #ff9000; /* Button color */
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.know-more-btn:hover {
+  background-color: #f5a623; /* Hover color */
+  transform: scale(1.05); /* Slightly scale the button on hover */
+}
+
+.service-card {
+  width: 300px;
+  text-align: center;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.service-card:hover {
+  transform: scale(1.05); /* Slightly scale the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a larger shadow */
+}
+
+
+/* Blog Section Styling */
+.blog-section {
+  text-align: center;
+  padding: 60px 30px;
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+/* Grid Layout for Blog Cards */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Reduced width with smaller min-width */
+  gap: 20px; /* Space between blog cards */
+  margin-top: 100px; /* Space above the grid */
+  justify-content: center; /* Center the grid */
+}
+
+/* Individual Blog Card */
+.blog-item {
+  max-width: 90%; /* Reduced card width */
+  background-color: #ffffff;
+  border-radius: 12px; /* Slightly larger border radius for a softer look */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: hidden; /* Prevent content overflow */
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  margin: 0 auto; /* Center the cards horizontally */
+}
+
+.blog-item:hover {
+  transform: translateY(-8px); /* Lift the card slightly more on hover */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow for hover */
+}
+
+/* Blog Image */
+.blog-image {
+  width: 100%; /* Full width of the card */
+  height: 220px; /* Adjusted height */
+  object-fit: cover; /* Maintain aspect ratio and crop overflow */
+  border-bottom: 3px solid #eaeaea; /* Cleaner divider below the image */
+  transition: transform 0.3s ease; /* Subtle zoom-in effect on hover */
+}
+
+.blog-item:hover .blog-image {
+  transform: scale(1.05); /* Slight zoom-in on hover for emphasis */
+}
+
+/* Blog Title */
+.blog-title {
+  font-size: 18px; /* Balanced font size */
+  font-weight: 700; /* Bolder font for prominence */
+  color: #333333; /* Dark text for readability */
+  margin: 20px 15px 10px; /* Adjusted spacing */
+  line-height: 1.4; /* Improved readability */
+}
+
+/* Blog Snippet */
+.blog-snippet {
+  font-size: 14px; /* Slightly smaller font */
+  color: #555555; /* Darker gray for more contrast */
+  line-height: 1.6; /* Enhanced line spacing */
+  margin: 0 15px 15px; /* Uniform padding around text */
+}
+
+/* Read More Link */
+.read-more {
+  display: block;
+  text-align: right; /* Align link to the right */
+  padding: 12px 15px; /* Adjusted padding for better spacing */
+  font-size: 14px; /* Slightly smaller font */
+  font-weight: 600; /* Bold font for emphasis */
+  color: #f39c12;; /* Primary blue for action links */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.read-more:hover {
+  color: #fac46e; /* Darker blue for hover state */
+  transform: translateX(3px); /* Subtle movement to indicate interaction */
+}
+
+/* View More Blogs Button */
+
+.view-more-blogs {
+  display: inline-block;
+  margin-top: 30px;
+  margin-right: 30px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #f39c12; /* Button background color */
+  border: none;
+  border-radius: 8px; /* Rounded button edges */
+  text-decoration: none; /* Remove underline */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+  float: right; /* Align the button to the right */
+}
+
+.view-more-blogs:hover {
+  background-color: #fac46e; /* Hover state with lighter shade */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+
+
+/* Testimonials Section Styling */
 .testimonials-section {
   text-align: center;
-  background-color: #fff;
-  padding: 50px 20px;
+  height: 65vh;
 }
 
-.testimonial {
-  background-color: #f9f3e7;
-  border-left: 5px solid #f5a623;
-  margin: 20px auto;
-  padding: 20px;
-  max-width: 600px;
-  text-align: left;
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 3 columns */
+  grid-gap: 5px; /* Very small gap */
+  margin-top: 30px;
+  justify-items: center; /* Ensures the cards are centered */
+  justify-content: center; /* Centers the grid itself */
 }
 
-.testimonial p {
-  margin: 0;
-  color: #333;
+.testimonial-item {
+  width: 250px;
+  height: 250px;
+  perspective: 1000px;
+}
+
+.testimonial-item-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.testimonial-item:hover .testimonial-item-inner {
+  transform: rotateY(180deg);
+}
+
+.testimonial-item-front,
+.testimonial-item-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backface-visibility: hidden;
+  border-radius: 0px;
+}
+
+.testimonial-item-front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-image {
+  width: 100%;
+  height: 180px;
+  border-radius: 0px;
+}
+
+.testimonial-item-back {
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background for readability */
+  color: white;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: rotateY(180deg); /* Ensure the back is hidden by default */
 }
 
 .testimonial-author {
   margin-top: 10px;
   font-style: italic;
-  color: #666;
 }
 
+
+
 /* About Us Section */
+
 .aboutus-section {
-  background-color: #fff;
-  padding: 50px 20px;
+  background: linear-gradient(to right, #f9f3e7, #ffe4c4);
+  padding: 150px 20px;
+  text-align:left;
 }
 
 .aboutus-content {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
   align-items: center;
-  justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 20px;
 }
 
 .aboutus-text {
-  flex: 1;
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+.aboutus-text h2 {
+  font-size: 2.5rem;
+  color: #f5a623;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.aboutus-text p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
 }
 
 .aboutus-images {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: end;
+  padding-left: 50px;
+  gap: 20px;
 }
 
 .aboutus-image {
   width: 150px;
-  height: 150px;
+  height: 350px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 10%;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.aboutus-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 
-/* Section Heading */
-.section-heading {
+/* Responsive Design */
+@media (max-width: fit-content) {
+  .carousel-heading {
+    font-size: 1.8rem; /* Slightly smaller heading font */
+    margin-bottom: 20px; /* Adjusted spacing */
+  }
+
+  .carousel-section {
+    position: relative;
+    height: 10vh; /* Adjust height dynamically */
+    padding-top: 20px; /* Reduced top padding */
+    padding-bottom: 20px; /* Added bottom padding for spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: top; /* Align content to the top */
+    text-align: center; /* Ensure proper alignment */
+  }
+
+  .carousel-container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    gap: 10px; /* Adjusted spacing */
+  }
+
+  .carousel-images {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 20px; /* Space between images */
+    scroll-behavior: smooth;
+    padding: 0 10px; /* Add padding for better spacing */
+  }
+
+  .carousel-image {
+    width: 100px; /* Smaller image size */
+    height: 100px;
+  }
+
+  .carousel-image.center-image {
+    width: 150px; /* Center image larger size */
+    height: 150px;
+    transform: scale(1.1); /* Slight emphasis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+  }
+
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    background-color: #f5a623; /* Keep the original style */
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  .carousel-arrow:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutus-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .aboutus-text {
+    margin-bottom: 20px;
+  }
+
+  .testimonial {
+    max-width: 90%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel-heading {
+    font-size: 1.8rem; /* Slightly smaller heading font */
+    margin-bottom: 20px; /* Adjusted spacing */
+  }
+
+  .carousel-section {
+    height: auto; /* Adjust height dynamically */
+    padding-top: 20px; /* Reduced top padding */
+    padding-bottom: 20px; /* Added bottom padding for spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align content to center */
+    text-align: center; /* Ensure proper alignment */
+  }
+
+  .carousel-container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    gap: 20px; /* Adjusted spacing between arrows and images */
+  }
+
+  .carousel-images {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between images */
+    padding: 0 10px; /* Add padding for better spacing */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+    height: 60vh; /* Set a maximum height for vertical scrolling */
+  }
+
+  .carousel-image {
+    width: 100px; /* Smaller image size */
+    height: 100px;
+  }
+
+  .carousel-image.center-image {
+    width: 150px; /* Center image larger size */
+    height: 150px;
+    transform: scale(1.1); /* Slight emphasis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+  }
+
+  /* Carousel Arrow Rotation on Hover */
+.carousel-arrow {
+  background-color: #f5a623;
+  color: white;
+  border: none;
   font-size: 2rem;
-  color: #333;
-  margin-bottom: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, transform 0.3s; /* Add transition for rotation */
 }
 
-/* About Us Paragraph */
-.aboutus-text p {
-  color: #666;
-  line-height: 1.6;
+/* Rotate the arrows when hovered */
+.carousel-arrow {
+  background-color: #f39c12; /* Optionally change the color on hover */
+  transform: rotate(90deg); /* Rotate the arrow 90 degrees */
 }
+
+
+
+
+  /* .carousel-arrow:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  } */
+}
+
+  
+
