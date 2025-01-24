@@ -31,9 +31,11 @@
     background-color: #f67e7d;
     color: white;
     border: none;
+    margin-right: 70px;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     cursor: pointer;
+    /* padding-right: 20px; */
   }
   
   /* Responsive Navbar */
