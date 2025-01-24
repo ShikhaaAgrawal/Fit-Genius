@@ -1,16 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom"; 
 import "./footer.css";
+import { Link } from "react-router-dom"; 
 
 const Footer = () => {
   return (
     <footer>
-      <div className="footer-subscribe">
-        <h2>FREE FITNESS TIPS</h2>
-        <p>Get a weekly dose of fitness directly into your mailbox.</p>
-        <div className="subscribe-input">
-          <input type="email" placeholder="Your email" />
-          <button>SUBSCRIBE</button>
+      <div className="footer-content">
+        {/* Brand Section */}
+        <div className="footer-brand">
+          <h2>Fit Genius</h2>
+          <p>
+            But I must explain to you how all this mistaken idea of denouncing
+            pleasure and praising.
+          </p>
+          <div className="footer-social">
+            <a href="#"><img src="/images/facebook-icon.png" alt="Facebook" /></a>
+            <a href="#"><img src="/images/linkedin-icon.png" alt="LinkedIn" /></a>
+            <a href="#"><img src="/images/twitter-icon.png" alt="Twitter" /></a>
+          </div>
         </div>
 
         {/* Links Section */}

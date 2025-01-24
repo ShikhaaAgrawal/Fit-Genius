@@ -1,5 +1,5 @@
 .sidebar {
-    background-color: #343a40;
+    background-color: #4a3b6a;
     color: white;
     width: 250px;
     height: 100vh;
@@ -27,7 +27,7 @@
   
   nav ul li.active a,
   nav ul li a:hover {
-    color: #ff6b6b;
+    color: white;
   }
   
   a {

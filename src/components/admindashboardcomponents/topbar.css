@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #f8f9fa;
+    background-color: #05417d;
     border-bottom: 1px solid #ddd;
   }
   
@@ -12,6 +12,7 @@
     width: 200px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    background-color: bisque;
   }
   
   .icons img {

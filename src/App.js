@@ -1,8 +1,8 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import Navbar from "./components/navbar";
-import Home from "./pages/Home";
-import AdminDashboard from "./pages/admindashboard";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Home from "./components/pages/Home";
+import AdminDashboard from "./components/pages/admindashboard";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
 }
 
 function AppContent() {
-  const location = useLocation();
+
 
   return (
     <div>

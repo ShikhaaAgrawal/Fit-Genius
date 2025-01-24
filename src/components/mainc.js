@@ -101,76 +101,6 @@ const MainContent = () => {
 
 
       {/* Our Services Section */}
-<<<<<<< HEAD
-      <div className="services-section">
-        <h2 className="section-heading">Our Services</h2>
-        <div className="services-container">
-          <div className="service-card">
-            <h3>Personal Training</h3>
-            <p>Get one-on-one training sessions with our expert trainers.</p>
-          </div>
-          <div className="service-card">
-            <h3>Nutrition Plans</h3>
-            <p>Customized meal plans to complement your workout routine.</p>
-          </div>
-          <div className="service-card">
-            <h3>Yoga Classes</h3>
-            <p>Join our yoga sessions to improve flexibility and mindfulness.</p>
-          </div>
-        </div>
-      </div>
-      <div>
-      {/* Journey of Transformation Section */}
-      <div className="journey-section">
-        <h2 className="journey-heading">
-          Your <span>Journey Of Transformation</span>
-        </h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam
-          sagittis aliquam, tortor sollicitudin egestas convallis.
-        </p>
-        <div className="journey-container">
-          <div className="journey-step">
-            <div className="journey-step-number">1</div>
-            <div className="journey-step-content">
-              <p><strong>Day 10</strong></p>
-              <p>Improved Posture</p>
-              <p>Improved Endurance</p>
-              <p>Improved Strength</p>
-            </div>
-          </div>
-          <div className="journey-step">
-            <div className="journey-step-number">2</div>
-            <div className="journey-step-content">
-              <p><strong>Day 30</strong></p>
-              <p>Increased Energy</p>
-              <p>Increased Mobility</p>
-              <p>Improved Stability</p>
-            </div>
-          </div>
-          <div className="journey-step">
-            <div className="journey-step-number">3</div>
-            <div className="journey-step-content">
-              <p><strong>Day 60</strong></p>
-              <p>Improved Posture</p>
-              <p>Improved Endurance</p>
-              <p>Improved Strength</p>
-            </div>
-          </div>
-          <div className="journey-step">
-            <div className="journey-step-number">4</div>
-            <div className="journey-step-content">
-              <p><strong>Day 90</strong></p>
-              <p>Improved Lifestyle</p>
-              <p>Improved Body Shape</p>
-              <p>Improved Skin and Sleep</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-=======
 <div className="services-section" id="services">
   <h2 className="section-heading">Our Services</h2>
   <div className="services-container">
@@ -194,7 +124,6 @@ const MainContent = () => {
     </div>
   </div>
 </div>
->>>>>>> 835d042c4319066a9c3296b499b42ae631b786db
 
 
 {/* Blog Section */}
