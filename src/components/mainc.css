@@ -1,0 +1,187 @@
+/* Carousel Section */
+.carousel-section {
+  text-align: center;
+  background: linear-gradient(to right, #fff, #f9f3e7);
+  padding: 50px 20px;
+}
+
+.carousel-heading {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.carousel-heading strong {
+  color: #f5a623; /* Yellow text for "Perfect Trainers" */
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.carousel-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.carousel-image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-image.center-image {
+  width: 200px;
+  height: 200px;
+  transform: scale(1.1); /* Make the center image slightly bigger */
+}
+
+.carousel-arrow {
+  background-color: #f5a623;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.carousel-arrow:hover {
+  background-color: #f39c12;
+}
+
+.left-arrow {
+  margin-right: 10px;
+}
+
+.right-arrow {
+  margin-left: 10px;
+}
+
+/* Our Services Section */
+.services-section {
+  text-align: center;
+  background-color: #f9f3e7;
+  padding: 50px 20px;
+}
+
+.section-heading {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-card h3 {
+  color: #f5a623;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: #666;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  text-align: center;
+  background-color: #fff;
+  padding: 50px 20px;
+}
+
+.testimonial {
+  background-color: #f9f3e7;
+  border-left: 5px solid #f5a623;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.testimonial p {
+  margin: 0;
+  color: #333;
+}
+
+.testimonial-author {
+  margin-top: 10px;
+  font-style: italic;
+  color: #666;
+}
+
+/* About Us Section */
+.aboutus-section {
+  background-color: #fff;
+  padding: 50px 20px;
+}
+
+.aboutus-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.aboutus-text {
+  flex: 1;
+}
+
+.aboutus-images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.aboutus-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+/* Section Heading */
+.section-heading {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* About Us Paragraph */
+.aboutus-text p {
+  color: #666;
+  line-height: 1.6;
+}
