@@ -67,6 +67,57 @@ const MainContent = () => {
           </div>
         </div>
       </div>
+      <div>
+      {/* Journey of Transformation Section */}
+      <div className="journey-section">
+        <h2 className="journey-heading">
+          Your <span>Journey Of Transformation</span>
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam
+          sagittis aliquam, tortor sollicitudin egestas convallis.
+        </p>
+        <div className="journey-container">
+          <div className="journey-step">
+            <div className="journey-step-number">1</div>
+            <div className="journey-step-content">
+              <p><strong>Day 10</strong></p>
+              <p>Improved Posture</p>
+              <p>Improved Endurance</p>
+              <p>Improved Strength</p>
+            </div>
+          </div>
+          <div className="journey-step">
+            <div className="journey-step-number">2</div>
+            <div className="journey-step-content">
+              <p><strong>Day 30</strong></p>
+              <p>Increased Energy</p>
+              <p>Increased Mobility</p>
+              <p>Improved Stability</p>
+            </div>
+          </div>
+          <div className="journey-step">
+            <div className="journey-step-number">3</div>
+            <div className="journey-step-content">
+              <p><strong>Day 60</strong></p>
+              <p>Improved Posture</p>
+              <p>Improved Endurance</p>
+              <p>Improved Strength</p>
+            </div>
+          </div>
+          <div className="journey-step">
+            <div className="journey-step-number">4</div>
+            <div className="journey-step-content">
+              <p><strong>Day 90</strong></p>
+              <p>Improved Lifestyle</p>
+              <p>Improved Body Shape</p>
+              <p>Improved Skin and Sleep</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
 
       {/* Testimonials Section */}
       <div className="testimonials-section">

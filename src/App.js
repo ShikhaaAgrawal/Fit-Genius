@@ -1,16 +1,27 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/navbar";
-import MainContent from "./components/mainc";
-import Footer from "./components/footer";
+import Home from "./pages/Home";
+import AdminDashboard from "./pages/admindashboard";
 
 function App() {
   return (
+    <Router>
+      <AppContent />
+    </Router>
+  );
+}
+
+function AppContent() {
+  const location = useLocation();
+
+  return (
     <div>
-      <Navbar />
-      <br></br>
-      <br></br>
-      <MainContent />
-      <Footer />
+
+      <Routes>
+        <Route path="/" element={<Home />} /> {/* Home Page */}
+        <Route path="/admin-dashboard" element={<AdminDashboard />} /> {/* Admin Dashboard */}
+      </Routes>
     </div>
   );
 }
