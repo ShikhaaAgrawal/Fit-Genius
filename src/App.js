@@ -16,12 +16,9 @@ function App() {
       <Navbar /> {/* Navbar should be inside Router */}
       <Routes>
         <Route path="/" element={<MainContent />} />
-        //<Route path="/nutrivision" element={<NutriVision />} />
+
         <Route path="/alignfit" element={<AlignFit />} />
-        //<Route path="/recipe-generator" element={<RecipeGenerator />} />
-        {/* <Route path="/harmonyhub" element={<HarmonyHub />} /> */}
-        //<Route path="/upload-food" element={<FoodUpload />} /> {/* Fixed route */}
-        //<Route path="/real-time-detection" element={<RealTimeDetection />} />
+        
       </Routes>
       <Footer />
     </Router>
