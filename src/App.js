@@ -1,28 +1,27 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-import Home from "./components/pages/Home";
-import AdminDashboard from "./components/pages/admindashboard";
+import Navbar from "./components/navbar";
+import MainContent from "./components/mainc";
+//import NutriVision from "./pages/nutriVision";
+import AlignFit from "./pages/alignFit";
+// import HarmonyHub from "./pages/harmonyHub";
+//import FoodUpload from "./pages/FoodUpload";
+//import RealTimeDetection from './pages/RealTimeDetection';
+//import RecipeGenerator from "./pages/RecipeGenerator";
+import Footer from "./components/footer";
 
 function App() {
   return (
     <Router>
-      <AppContent />
-    </Router>
-  );
-}
-
-function AppContent() {
-
-
-  return (
-    <div>
-
+      <Navbar /> {/* Navbar should be inside Router */}
       <Routes>
-        <Route path="/" element={<Home />} /> {/* Home Page */}
-        <Route path="/admin-dashboard" element={<AdminDashboard />} /> {/* Admin Dashboard */}
+        <Route path="/" element={<MainContent />} />
+
+        <Route path="/alignfit" element={<AlignFit />} />
+        
       </Routes>
-    </div>
+      <Footer />
+    </Router>
   );
 }
 

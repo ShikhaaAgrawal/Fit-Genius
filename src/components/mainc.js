@@ -6,6 +6,7 @@ import yogaImage from "./images/yoga.jpg";
 import trainerImage1 from "./images/trainerimage1.jpg";
 import trainerImage2 from "./images/trainerimage2.jpg";
 import trainerImage3 from "./images/trainerimage3.jpg";
+import { Link } from "react-router-dom";
 
 const MainContent = () => {
   const images = [mealImage, workoutImage, yogaImage];
@@ -100,7 +101,7 @@ const MainContent = () => {
 </div>
 
 
-      {/* Our Services Section */}
+  {/* Our Services Section */}
 <div className="services-section" id="services">
   <h2 className="section-heading">Our Services</h2>
   <div className="services-container">
@@ -108,7 +109,8 @@ const MainContent = () => {
       <img src={workoutImage} alt="Personal Training" className="service-image" />
       <h3>AlignFit AI</h3>
       <p>Get one-on-one training sessions with our expert trainers.</p>
-      <button className="know-more-btn">Know More</button>
+      <br/>
+      <Link to="/alignfit" className="know-more-btn">Know More</Link>
     </div>
     <div className="service-card">
       <img src={mealImage} alt="Nutrition Plans" className="service-image" />
