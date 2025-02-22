@@ -1,3 +1,21 @@
+/* General container styling for all app content */
+.app-container {
+  max-width: 1200px; /* You can adjust this based on your design */
+  margin: 0 auto; /* Centers the content */
+  padding: 0 16px; /* Adds padding to give space */
+}
+
+.content {
+  padding: 20px 0; /* Adds vertical spacing between Navbar and Footer */
+}
+
+.navbar, .footer {
+  max-width: 1200px; /* Ensure Navbar and Footer have the same width as content */
+  margin: 0 auto;
+  width: 100%; /* Ensure full width */
+}
+
+/* Other existing styles from your previous App.css */
 .App {
   text-align: center;
 }
