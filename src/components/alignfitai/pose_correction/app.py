@@ -153,7 +153,7 @@ def pose_feedback():
 # ===================== Workout Plan Generator ===================== #
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key="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",
+    api_key="",
 )
 
 @app.route('/generate-workout', methods=['POST'])
